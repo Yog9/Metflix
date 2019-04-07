@@ -23,7 +23,7 @@ export default function MovieItem(props) {
                         </a>
                     </div>
                 </div>
-                <div class="list__movie-title">{props.title}</div>
+                <div className="list__movie-title">{props.title}</div>
             </div>
         </div>
     )
