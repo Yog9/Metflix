@@ -3,7 +3,7 @@ import React from 'react'
 export default function MovieItem(props) {
     return (
         <div>
-            <div className="list-container__movie-item">
+            <div className="list-container__movie-item" key={props.key}>
                 <span className="list__movie-vote-average">
                     {props.vote}</span>
                 <div className="list__movie-image">
