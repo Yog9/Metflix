@@ -8,7 +8,7 @@ export default class Movies extends Component {
                     <div className="Main-wrapper">
                         <h1 className="App-main-title">
                             {this.props.movie_type}</h1>
-                        <MovieContainer movies={this.props.movies} movie_type={this.props.movie_type} load_more={this.props.loadmore} />
+                        <MovieContainer movies={this.props.movies} movie_type={this.props.movie_type} loadMore={this.props.loadMore} />
                     </div>
                 </div>
             </React.Fragment>

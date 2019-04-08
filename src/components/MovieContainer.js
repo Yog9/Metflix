@@ -16,7 +16,7 @@ export default class MovieContainer extends Component {
                 <div className="list-container">
                     {movie}
                 </div>
-                <button className="button" onClick={() => { this.props.load_more(this.props.movie_type) }}>Load more</button>
+                <button className="button" onClick={() => { this.props.loadMore(this.props.movie_type) }}>Load more</button>
             </React.Fragment>
         )
     }

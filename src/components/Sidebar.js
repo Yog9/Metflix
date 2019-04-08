@@ -10,10 +10,10 @@ class Sidebar extends Component {
                     <div className="App-sidebar">
                         <ul className="sidebar-menu">
                             <li className="sidebar-menu__item">
-                                <NavLink to="/discover" className="is-active">
-                                    <svg width="16" height="19" viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg"><title>Discover</title>
+                                <NavLink to="/now_playing" className="is-active">
+                                    <svg width="16" height="19" viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg"><title>Now Playing</title>
                                         <path d="M10.576 3.368L15.122.74 14.79 0 9.066 1.897 7.953 4.473H0v1.983h1.148L2.708 18.6h7.875l1.56-12.144h1.147V4.473H10.1"></path></svg>
-                                    Discover
+                                    Now Playing
              </NavLink>
                             </li>
                             <li className="sidebar-menu__item">
@@ -32,7 +32,7 @@ class Sidebar extends Component {
                     </NavLink>
                             </li>
                             <li className="sidebar-menu__item">
-                                <NavLink to="/coming_soon">
+                                <NavLink to="/upcoming">
                                 <svg  fill="white" width="15" height="17" xmlns="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 491.858 491.858" xml="preserve">
 <g>
@@ -48,7 +48,7 @@ class Sidebar extends Component {
 	</g>
 </g>
 </svg>
-  Coming Soon
+  Upcoming
   </NavLink>
   </li>
                         </ul>
