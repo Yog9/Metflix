@@ -50,12 +50,12 @@ class App extends Component {
     });
     console.log(`This is load more clicked ${count} times in ${movietype} section and page is ${this.state.page}`);
 
-    if (movietype === 'Now Playing') {
+    if (movietype == 'Now Playing') {
       axios.get(`${APIURL}now_playing?api_key=${APIKEY}&language=en-US&page=${this.state.page}`)
         .then((response) => {
           console.log(`Extra res array of discover ${response.data.results}`);
           this.setState({
-            discovermovies: [...this.state.now_playingmovies, response.data.results],
+            now_playingmovies: [...this.state.now_playingmovies, response.data.results],
           });
           console.log(`Length of discover movies is ${this.state.now_playingmovies}`);
         })
@@ -65,7 +65,7 @@ class App extends Component {
         });
     }
 
-    if (movietype === 'Popular') {
+    if (movietype == 'Popular') {
       console.log(`Length of popular movies is  before api ${this.state.popularmovies}`);
       axios.get(`${APIURL}popular?api_key=${APIKEY}&language=en-US&page=${this.state.page}`)
         .then((response) => {
@@ -81,7 +81,7 @@ class App extends Component {
         });
     }
 
-    if (movietype === 'Top Rated') {
+    if (movietype == 'Top Rated') {
       axios.get(`${APIURL}top_rated?api_key=${APIKEY}&language=en-US&page=${this.state.page}`)
         .then((response) => {
           console.log(`Extra res array of toprated ${response.data.results}`);
@@ -95,12 +95,12 @@ class App extends Component {
           console.log(error);
         });
     }
-    if (movietype === 'Upcoming') {
+    if (movietype == 'Upcoming') {
       axios.get(`${APIURL}upcoming?api_key=${APIKEY}&language=en-US&page=${this.state.page}`)
         .then((response) => {
-          console.log(`Extra res array of coming soon  ${response.data.results}`);
+          console.log(`Extra res array of coming soon  ${response.data}`);
           this.setState({
-            coming_soonmovies: [...this.state.upcomingmovies, response.data.results],
+            upcomingmovies: [...this.state.upcomingmovies, response.data.results],
           });
           console.log(`Length of coming soon movies is ${this.state.upcomingmovies}`);
         })
