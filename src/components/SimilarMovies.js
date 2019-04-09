@@ -19,7 +19,7 @@ export default function SimilarMovies(props) {
                                 </path>
                             </svg>
                         </div>
-                        <Link className="list__movie-image-link" to={`/movie_detail/${props.id}`} target="_blank">
+                        <Link className="list__movie-image-link" to={`/movie_detail/${props.id}`}>
                             <img src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2${props.path}`} alt={`${props.title}`} />
                         </Link>
                     </div>
