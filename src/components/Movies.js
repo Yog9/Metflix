@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import MovieContainer from './MovieContainer';
+
 export default class Movies extends Component {
     render() {
         return (

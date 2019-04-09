@@ -3,11 +3,12 @@ import MovieItem from './MovieItem';
 
 export default class MovieContainer extends Component {
     render() {
-        let movie = this.props.movies.map(movie_item =>
+        let movie = this.props.movies.map((movie_item, index) =>
             <MovieItem vote={movie_item.vote_average}
                 path={movie_item.poster_path}
                 title={movie_item.title}
-                key={movie_item.id}
+                key={index}
+                id={movie_item.id}
                 movie_type={this.props.movie_type}
             />
         )
@@ -16,7 +17,7 @@ export default class MovieContainer extends Component {
                 <div className="list-container">
                     {movie}
                 </div>
-                <button className="button" onClick={() => { this.props.loadMore(this.props.movie_type) }}>Load more</button>
+
             </React.Fragment>
         )
     }

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-export default function MovieItem(props) {
+export default function SimilarMovies(props) {
     return (
         <React.Fragment>
             <div className="list-container__movie-item" key={props.id} >
@@ -19,7 +19,7 @@ export default function MovieItem(props) {
                                 </path>
                             </svg>
                         </div>
-                        <Link className="list__movie-image-link" to={`movie_detail/${props.id}`}>
+                        <Link className="list__movie-image-link" to={`/movie_detail/${props.id}`} target="_blank">
                             <img src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2${props.path}`} alt={`${props.title}`} />
                         </Link>
                     </div>
