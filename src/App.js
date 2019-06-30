@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
 import axios from 'axios';
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
 import Movies from './components/Movies';
 import MovieDetail from './components/MovieDetail';
 import Sidebar from './components/Sidebar';
@@ -74,7 +74,7 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Router>
+        <HashRouter basename="/Metflix">
 
           <div>
             <Header search={this.handleSearch} />
@@ -101,7 +101,7 @@ class App extends Component {
             </div>
           </div>
 
-        </Router>
+        </HashRouter>
 
       </React.Fragment>
     );
