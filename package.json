@@ -10,10 +10,13 @@
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
     "react-slick": "^0.23.2",
+    "serve": "^11.0.2",
     "slick-carousel": "^1.8.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "serve -s build",
+    "dev": "react-scripts start",
+    "heroku-postbuild": "npm run build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
