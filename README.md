@@ -5,7 +5,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ### Summary
- Browse your favourite movies with metflix. :D
+ Browse your favourite movies with metflix.
+ 
  Built with React and React Router.
  
  ![](/metflix.jpg)
@@ -14,9 +15,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
  
  
  ### How to run 
+ 
   * Create a config.js file in api folder. In config.js file write
   
   `export const APIURL = 'https://api.themoviedb.org/3/movie/';
+  
    export const APIKEY = 'YOUR_TMDB_API_KEY';`
   
 
