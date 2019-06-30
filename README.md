@@ -8,7 +8,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
  Browse your favourite movies with metflix. :D
  Built with React and React Router.
  
- ![](/snapscout.jpg)
+ ![](/metflix.jpg)
+ 
+ ![](/details.jpg)
+ 
  
  ### How to run 
   * Create a config.js file in api folder. In config.js file write
