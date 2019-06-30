@@ -18,9 +18,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
  
   * Create a config.js file in api folder. In config.js file write
   
-  `export const APIURL = 'https://api.themoviedb.org/3/movie/';
+  `export const APIURL = 'https://api.themoviedb.org/3/movie/';`
   
-   export const APIKEY = 'YOUR_TMDB_API_KEY';`
+   `export const APIKEY = 'YOUR_TMDB_API_KEY';`
   
 
 
