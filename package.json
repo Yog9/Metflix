@@ -1,16 +1,24 @@
 {
-  "name": "my-app",
+  "name": "metflix",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://yog9.github.io/Metflix",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.19.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.1",
+    "react-slick": "^0.23.2",
+    "serve": "^11.3.0",
+    "slick-carousel": "^1.8.1"
   },
   "scripts": {
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
