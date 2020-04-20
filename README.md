@@ -1,4 +1,5 @@
  # Metflix
+ [![Build Status](https://travis-ci.org/Yog9/Metflix.svg?branch=master)](https://travis-ci.org/Yog9/Metflix)
  
 [Demo of Metflix Here](https://yog9.github.io/Metflix/)
 
