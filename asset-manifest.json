@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Metflix/static/css/main.d09bb36c.chunk.css",
+    "main.js": "/Metflix/static/js/main.f351dbd8.chunk.js",
+    "main.js.map": "/Metflix/static/js/main.f351dbd8.chunk.js.map",
+    "runtime-main.js": "/Metflix/static/js/runtime-main.15813dc2.js",
+    "runtime-main.js.map": "/Metflix/static/js/runtime-main.15813dc2.js.map",
+    "static/js/2.d2174f35.chunk.js": "/Metflix/static/js/2.d2174f35.chunk.js",
+    "static/js/2.d2174f35.chunk.js.map": "/Metflix/static/js/2.d2174f35.chunk.js.map",
+    "index.html": "/Metflix/index.html",
+    "precache-manifest.cc2a9952ded36d6712e35e69ab5948a5.js": "/Metflix/precache-manifest.cc2a9952ded36d6712e35e69ab5948a5.js",
+    "service-worker.js": "/Metflix/service-worker.js",
+    "static/css/main.d09bb36c.chunk.css.map": "/Metflix/static/css/main.d09bb36c.chunk.css.map",
+    "static/js/2.d2174f35.chunk.js.LICENSE.txt": "/Metflix/static/js/2.d2174f35.chunk.js.LICENSE.txt",
+    "static/media/no-image.png": "/Metflix/static/media/no-image.73f0bcaf.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.15813dc2.js",
+    "static/js/2.d2174f35.chunk.js",
+    "static/css/main.d09bb36c.chunk.css",
+    "static/js/main.f351dbd8.chunk.js"
+  ]
+}
