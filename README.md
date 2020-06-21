@@ -1,6 +1,8 @@
  # Metflix
  [![Build Status](https://travis-ci.org/Yog9/Metflix.svg?branch=master)](https://travis-ci.org/Yog9/Metflix)
  
+ [![HitCount](http://hits.dwyl.com/Yog9/Metflix.svg)](http://hits.dwyl.com/Yog9/Metflix)
+ 
 [Demo of Metflix Here](https://yog9.github.io/Metflix/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -26,7 +28,7 @@ The purpose of this project was to get familiar with React js and React Router.
 
 * In the root run 
 
-`npm install`
+  `npm install`
 
 * Create a config.js file in api folder. In config.js file write
   
@@ -40,7 +42,7 @@ The purpose of this project was to get familiar with React js and React Router.
 
 * Then run
  
- `npm start`
+  `npm start`
  
  
 ### Built With
@@ -54,7 +56,9 @@ The purpose of this project was to get familiar with React js and React Router.
 **2. See movie details**
 
 ### Coming Soon 
-- [ ] Create the project with Redux.
+- [x] Create the project with Redux.
+
+- [ ] Recreate with context API and hooks
 
  
  
