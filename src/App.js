@@ -14,7 +14,6 @@ class App extends Component {
     top_ratedmovies: [],
     now_playingmovies: [],
     page: 1
-    /*searchmovies: [],*/
   };
 
   getMovies = (movietype, movies, page = this.state.page) => {
@@ -23,36 +22,15 @@ class App extends Component {
         `${APIURL}${movietype}?api_key=${APIKEY}&language=en-US&page=${page}`
       )
       .then(response => {
-        console.log(response.data.results);
         this.setState({
           [movies]: response.data.results
         });
-        console.log(this.state);
       })
       .catch(error => {
         // handle error
         console.log(error);
       });
   };
-  /*handleSearch = (query) => {
-    // Initial state
-    this.setState({
-      query: query
-
-    });
-    // If there is a query, fetch the data from TMDB
-    if (query) {
-      axios.get(`https://api.themoviedb.org/3/search/movie?query=${query}&api_key=${APIKEY}&page=1`)
-        .then(response => {
-          this.setState({
-            searchmovies: response.data.results
-          });
-        })
-        .catch(error => {
-          console.log(error);
-        });
-    }
-  }*/
 
   componentDidMount() {
     this.getMovies("now_playing", "now_playingmovies", 1);
@@ -115,8 +93,6 @@ class App extends Component {
                   )}
                 />
                 <Route path="/movie_detail/:id" component={MovieDetail} />
-                {/* <Route path="/search"
-                  component={() => <Movies movies={this.state.searchmovies} handleSearch={this.handleSearch} />} />*/}
               </Switch>
             </div>
           </div>

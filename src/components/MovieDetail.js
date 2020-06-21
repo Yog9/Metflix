@@ -1,63 +1,67 @@
-import React, { Component } from "react";
-import axios from "axios";
-import Cast from "./Cast";
-import { APIKEY, APIURL } from "../api/config";
-import SimilarMoviesContainer from "./SimilarMoviesContainer";
+import React, { Component } from 'react';
+import axios from 'axios';
+import Cast from './Cast';
+import { APIKEY, APIURL } from '../api/config';
+import SimilarMoviesContainer from './SimilarMoviesContainer';
 
 export default class MovieDetail extends Component {
   state = {
-    movie_detail: "",
+    movie_detail: '',
     cast_array: [],
-    similar_movies_array: []
+    similar_movies_array: [],
   };
-
-  componentDidMount() {
-    console.log(this.props);
-    let id = this.props.match.params.id;
+  apiCall = (id) => {
     axios
       .get(`${APIURL}${id}?api_key=${APIKEY}&language=en-US`)
-      .then(response => {
+      .then((response) => {
         this.setState({
-          movie_detail: response.data
+          movie_detail: response.data,
         });
-        console.log(`movie detail ${this.state.movie_detail}`);
       })
-      .catch(error => {
+      .catch((error) => {
         // handle error
         console.log(error);
       });
 
     axios
       .get(`${APIURL}${id}/casts?api_key=${APIKEY}`)
-      .then(response => {
+      .then((response) => {
         this.setState({
-          cast_array: response.data.cast.slice(0, 9)
+          cast_array: response.data.cast.slice(0, 9),
         });
-        console.log(`cast array detail ${this.state.cast_array}`);
       })
-      .catch(error => {
+      .catch((error) => {
         // handle error
         console.log(error);
       });
 
     axios
       .get(`${APIURL}${id}/similar?api_key=${APIKEY}&language=en-US&page=1`)
-      .then(response => {
+      .then((response) => {
         this.setState({
-          similar_movies_array: response.data.results.slice(0, 9)
+          similar_movies_array: response.data.results.slice(0, 9),
         });
-        console.log(`similar movies array ${this.state.similar_movies_array}`);
       })
-      .catch(error => {
+      .catch((error) => {
         // handle error
         console.log(error);
       });
+  };
+  componentDidMount() {
+    let id = this.props.match.params.id;
+    this.apiCall(id);
+    window.scrollTo(0, 0);
   }
-
+  componentWillReceiveProps(prevProps) {
+    if (prevProps.match.params.id !== this.props.match.params.id) {
+      const newId = prevProps.match.params.id;
+      this.apiCall(newId);
+    }
+  }
   movieBackdropStyles = {
     //backgroundImage: `url(https://image.tmdb.org/t/p/w1280${this.state.movie_detail.backdrop_path})`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover"
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
   };
   render() {
     return (
@@ -134,6 +138,7 @@ export default class MovieDetail extends Component {
               cast_array={this.state.cast_array}
             />
             <h1 className="movie-title">Similar Movies</h1>
+
             <SimilarMoviesContainer
               id={this.state.movie_detail.id}
               similar_movies_array={this.state.similar_movies_array}

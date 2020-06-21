@@ -4,7 +4,6 @@ import noImage from "../images/no-image.png";
 
 class Cast extends React.Component {
     render() {
-        console.log(this.props.cast_array);
         var settings = {
             dots: false,
             infinite: false,
